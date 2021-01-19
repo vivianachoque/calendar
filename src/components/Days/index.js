@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Days() {
+export default function Days({ day }) {
   return (
     <div>
-      day
+      <h1>{ day }</h1>
     </div>
   )
 }
