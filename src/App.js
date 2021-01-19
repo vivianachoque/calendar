@@ -55,14 +55,38 @@ export const App = () => {
     const today = new Date();
     const month = today.getMonth();
     const year = today.getFullYear();
-    console.log(year);
+    const [currentMonth, setCurrentMonth] = useState(month);
+    const [currentYear, setCurrentYear] = useState(year);
+    
+
+    const handleNext = () => {
+        if (currentMonth < 11) {
+            setCurrentMonth(currentMonth + 1);
+        } else {
+            setCurrentMonth(0);
+            setCurrentYear(currentYear + 1);
+        }
+    }
+
+    const handlePrevius = () => {
+        if (currentMonth > 0) {
+            setCurrentMonth(currentMonth - 1);
+        } else {
+            setCurrentMonth(11);
+            setCurrentYear(currentYear - 1);
+        }
+    }
 
     return (
         <div>
           <div>
-            <h1>{ `${months[month]} ${year}` }</h1>
-            <button>Previus</button>
-            <button>Next</button>
+            <h1>{ `${months[currentMonth].name} ${currentYear}` }</h1>
+            <button
+              onClick={handlePrevius}
+            >Previus</button>
+            <button
+               onClick={handleNext}
+            >Next</button>
           </div>
           <Month 
             name={months[month].name}
