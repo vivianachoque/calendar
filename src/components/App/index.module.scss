@@ -2,4 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #303030;
+}
+
+.containerDate {
+  min-width: 100%;
+  text-align: center;
+}
+
+.date {
+  color: #fff;
+  font-weight: lighter;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: #ffff;
 }
