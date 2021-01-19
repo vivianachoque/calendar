@@ -1,9 +1,10 @@
 import React from 'react'
+import styles from './index.module.scss';
 
 export default function Days({ numDay }) {
   return (
-    <div>
-      <h1>{ numDay }</h1>
+    <div className={styles.containerDay}>
+      <p clasName={styles.numDay}>{ numDay }</p>
     </div>
   )
 }
