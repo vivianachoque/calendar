@@ -58,7 +58,12 @@ export const App = () => {
     console.log(year);
 
     return (
-        <div style={{ width: '700px', height: '400px' }}>
+        <div>
+          <div>
+            <h1>{ `${months[month]} ${year}` }</h1>
+            <button>Previus</button>
+            <button>Next</button>
+          </div>
           <Month 
             name={months[month].name}
             days={months[month].days}
