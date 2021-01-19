@@ -1,28 +1,23 @@
 import { useState } from 'react';
-import { Calendar } from './Calendar';
+import Month from './components/Month';
 
-const fakeEvents = [{
-    date: new Date(),
-    title: 'Trash day!',
-}, {
-    date: new Date(),
-    title: 'Other stuff',
-}];
+const months = [
+    {
+        name: 'January'
+        days: 31
+    }
+        , 'February', 'March', 'April', 'May', 'August', 'September', 'October', 'November', 'December'];
 
 export const App = () => {
     const today = new Date();
-    const events = useState(fakeEvents);
+    const month = today.getMonth();
     
-    const onClickDate = selectedDate => {
-        alert(`User clicked: ${selectedDate.toLocalDateString()}`);
-    }
 
     return (
         <div style={{ width: '700px', height: '400px' }}>
-            <Calendar
-                events={events}
-                onClickDate={onClickDate}
-                startingDate={today} />
+          <Month 
+            name={months[month]}
+          />
         </div>
     );
     }
