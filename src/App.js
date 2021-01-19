@@ -54,13 +54,15 @@ const months = [
 export const App = () => {
     const today = new Date();
     const month = today.getMonth();
-    
+    const year = today.getFullYear();
+    console.log(year);
 
     return (
         <div style={{ width: '700px', height: '400px' }}>
           <Month 
             name={months[month].name}
             days={months[month].days}
+            year={year}
           />
         </div>
     );
