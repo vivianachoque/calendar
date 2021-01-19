@@ -1,56 +1,8 @@
 import { useState } from 'react';
 import Month from '../Month';
+import MONTHS from './constants/months'
 import styles from './index.module.scss';
 
-const months = [
-    {
-        name: 'January',
-        days: 31,
-    },
-    {
-        name: 'February',
-        days: 28
-    },
-    {
-        name: 'March',
-        days: 30
-    },
-    {
-        name: 'April',
-        days: 30
-    },
-    {
-        name: 'May',
-        days: 31
-    },
-    {
-        name: 'May',
-        days: 31
-    },
-    {
-        name: 'June',
-        days: 30
-    },
-    {
-        name: 'July',
-        days: 31
-    },
-    {
-        name: 'September',
-        days: 30
-    },
-    {
-        name: 'October',
-        days: 31
-    },
-    {
-        name: 'November',
-        days: 30
-    },
-    {
-        name: 'December',
-        days: 31
-    }];
 
 const App = () => {
     const today = new Date();
@@ -80,18 +32,22 @@ const App = () => {
 
     return (
         <div>
-          <div>
-            <h1>{ `${months[currentMonth].name} ${currentYear}` }</h1>
-            <button
+          <div className={styles.containerDate}>
+            <h1 className={styles.date}>{ `${MONTHS[currentMonth].name} ${currentYear}` }</h1>
+            <button 
+              className={styles.button}
               onClick={handlePrevius}
-            >Previus</button>
+            >
+              Previous
+            </button>
             <button
+               className={styles.button}
                onClick={handleNext}
             >Next</button>
           </div>
           <Month 
-            name={months[month].name}
-            days={months[month].days}
+            name={MONTHS[month].name}
+            days={MONTHS[month].days}
             year={year}
           />
         </div>
