@@ -10,8 +10,8 @@ export default function Month({ name, days }) {
     <div>
       <div className={styles.containerDays}>
          {
-            allDays.map((el) => (
-               <Days day={el + 1} />
+            allDays.map((numDay) => (
+               <Days key={numDay} numDay={numDay + 1} />
             ))
          }  
       </div>
