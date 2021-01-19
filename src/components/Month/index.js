@@ -4,7 +4,7 @@ import styles from './index.module.scss';
 import Days from '../Days';
 
 export default function Month({ name, days }) {
-  const allDays = [...Array(days - 1).keys()];
+  const allDays = [...Array(days).keys()];
 
   return (
       <div className={styles.containerDays}>

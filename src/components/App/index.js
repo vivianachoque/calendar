@@ -31,7 +31,7 @@ const App = () => {
     }
 
     return (
-        <div>
+        <div className={styles.containerCalendar}>
           <div className={styles.containerDate}>
             <h1 className={styles.date}>{ `${MONTHS[currentMonth].name} ${currentYear}` }</h1>
             <button 
@@ -43,11 +43,13 @@ const App = () => {
             <button
                className={styles.button}
                onClick={handleNext}
-            >Next</button>
+            >
+              Next
+            </button>
           </div>
           <Month 
-            name={MONTHS[month].name}
-            days={MONTHS[month].days}
+            name={MONTHS[currentMonth].name}
+            days={MONTHS[currentMonth].days}
             year={year}
           />
         </div>

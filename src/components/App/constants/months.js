@@ -9,7 +9,7 @@ const MONTHS = [
   },
   {
       name: 'March',
-      days: 30
+      days: 31
   },
   {
       name: 'April',
