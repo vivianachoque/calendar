@@ -5,7 +5,7 @@ import Days from '../Days';
 
 export default function Month({ name, days }) {
   const allDays = [...Array(days).keys()];
-
+  console.log(new Date('01-19-2021').getDay());
   return (
       <div className={styles.containerDays}>
          {
