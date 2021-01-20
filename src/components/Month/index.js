@@ -10,7 +10,7 @@ export default function Month({ name, days, numMonth, year }) {
 
   const previuosEmptyDays =[...Array(firstDay > 0 ? (firstDay) : 0).keys()];
 
-  const nextEmptyDays =[...Array(firstDay > 0 ? (6 - lastDay) : 0).keys()];
+  const nextEmptyDays =[...Array(6 -lastDay).keys()];
 
   return (
       <div className={styles.containerDays}>
