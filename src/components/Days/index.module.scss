@@ -5,6 +5,11 @@
    margin: 10px;
   }
 
+  .containerDayEmpty {
+    @extend .containerDay;
+    background-color: reD;
+  }
+
 .numDay { 
   margin: 0;
   padding: 10px;

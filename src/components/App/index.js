@@ -51,6 +51,7 @@ const App = () => {
             name={MONTHS[currentMonth].name}
             days={MONTHS[currentMonth].days}
             year={year}
+            numMonth={currentMonth}
           />
         </div>
     );

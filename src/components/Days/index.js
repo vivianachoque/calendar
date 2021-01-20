@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './index.module.scss';
 
-export default function Days({ numDay }) {
+export default function Days({ numDay, isEmpty}) {
   return (
-    <div className={styles.containerDay}>
+    <div className={isEmpty ? styles.containerDayEmpty : styles.containerDay}>
       <p className={styles.numDay}>{ numDay }</p>
     </div>
   )
